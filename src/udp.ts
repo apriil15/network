@@ -1,4 +1,4 @@
-// 1. "npm run start"
+// 1. "ts-node ./src/udp.ts"
 // 2. open other terminal and run "nc -u 127.0.0.1 5500"
 
 // -u: UDP mode
