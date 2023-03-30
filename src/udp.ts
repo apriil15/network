@@ -1,4 +1,4 @@
-// 1. "ts-node ./src/udp.ts"
+// 1. "npx ts-node ./src/udp.ts"
 // 2. open other terminal and run "nc -u 127.0.0.1 5500"
 
 // -u: UDP mode
@@ -10,5 +10,5 @@ const socket = createSocket('udp4')
 socket.bind(5500, '127.0.0.1')
 
 socket.on('message', (msg, info) => {
-  console.log(msg, info)
+  console.log(msg.toString(), info)
 })

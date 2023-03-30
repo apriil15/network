@@ -1,4 +1,4 @@
-// 1. "ts-node ./src/tcp.ts"
+// 1. "npx ts-node ./src/tcp.ts"
 // 2. open other terminal and run "nc 127.0.0.1 8080"
 
 import { createServer } from 'net'
@@ -11,7 +11,7 @@ const server = createServer(socket => {
   socket.write('Hello client!')
 
   socket.on('data', data => {
-    console.log(`received data ${data.toString()}`)
+    console.log(`received data: ${data.toString()}`)
   })
 })
 
